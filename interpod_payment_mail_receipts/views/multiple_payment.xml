@@ -28,8 +28,14 @@ ${user.signature | safe}
             <field name="view_type">form</field>
             <field name="arch" type="xml">
                 <form>
-                    <button type='object' name='send_receipts' string='Send Receipts'/>
-                </form>
+                	<p class="oe_grey">
+                        	Send the selected receipts to their respective partners.
+                    	</p>
+                    	<footer>
+                        	<button string="Send Receipts" name="send_receipts" type="object" default_focus="1" class="btn-primary"/>
+                        	<button string="Cancel" class="btn-default" special="cancel"/>
+                    	</footer>
+		</form>
             </field>
         </record>
         <act_window name="Send Receipts By Email"
