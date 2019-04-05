@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api, tools
 
-class MailComposer(models.TransientModel):
-    _inherit = 'mail.compose.message'
+class MultipleReceiptSender(models.TransientModel):
+    _name = 'interpod.multiple.receipt'
 
     def send_receipts(self):
         context = self._context['active_ids']

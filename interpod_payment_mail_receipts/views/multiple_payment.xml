@@ -24,22 +24,22 @@ ${user.signature | safe}
         </record>
         <record id="payment_receipts_mail_view" model="ir.ui.view">
             <field name="name">interpod_payment_recepit_mail_view</field>
-            <field name="model">mail.compose.message</field>
+            <field name="model">interpod.multiple.receipt</field>
             <field name="view_type">form</field>
             <field name="arch" type="xml">
                 <form>
-                	<p class="oe_grey">
-                        	Send the selected receipts to their respective partners.
-                    	</p>
-                    	<footer>
-                        	<button string="Send Receipts" name="send_receipts" type="object" default_focus="1" class="btn-primary"/>
-                        	<button string="Cancel" class="btn-default" special="cancel"/>
-                    	</footer>
-		</form>
+                    <p class="oe_grey">
+                        Send the selected receipts to their respective partners.
+                    </p>
+                    <footer>
+                        <button string="Send Receipts" name="send_receipts" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
             </field>
         </record>
         <act_window name="Send Receipts By Email"
-            res_model="mail.compose.message"
+            res_model="interpod.multiple.receipt"
             src_model="account.payment"
             view_type="form"
             view_mode="form"
